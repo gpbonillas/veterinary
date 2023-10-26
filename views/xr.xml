@@ -3,7 +3,7 @@
     <record model="ir.actions.act_window" id="xr_list_action">
         <field name="name">Radiology</field>
         <field name="res_model">veterinary.xr</field>
-        <field name="view_type">form</field>
+        <field name="binding_view_types">form</field>
         <field name="view_mode">tree,form</field>
     </record>
 
@@ -80,7 +80,7 @@
     <record id="action_xr_form" model="ir.actions.act_window">
         <field name="name">xrs</field>
         <field name="res_model">veterinary.xr</field>
-        <field name="view_type">form</field>
+        <field name="binding_view_types">form</field>
         <field name="view_mode">tree,form</field>
         <field name="search_view_id" ref="xr_search_view"/>
         <field name="view_id" ref="xr_tree_view"/>
