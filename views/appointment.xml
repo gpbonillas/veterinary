@@ -64,7 +64,6 @@
             </field>
         </record>
 
-
         <record model="ir.ui.view" id="appointment_tree_view">
             <field name="name">veterinary.appointment.tree</field>
             <field name="model">veterinary.appointment</field>

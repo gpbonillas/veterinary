@@ -125,8 +125,7 @@
                                         <img t-att-src="kanban_image('veterinary.animal', 'image', record.id.raw_value)" class="o_kanban_image oe_kanban_avatar_smallbox"/>
                                     </t>
                                 </div>
-                                <div t-attf-class="oe_kanban_content">
-                                    <!-- title -->
+                                <div t-attf-class="oe_kanban_content">                            
                                     <field name="name"/>
                                     <span> - </span>
                                     <field name="microchip_number"/>
@@ -156,7 +155,7 @@
                         name="open_animal" 
                         groups="veterinary.group_veterinary_manager" 
                         context="{'default_partner_id': active_id}">
-                        
+
                         <div class="o_form_field o_stat_info">
                             <span class="o_stat_text">Animals</span>
                         </div>
@@ -177,7 +176,7 @@
             </field>
         </record>
 
-        <record id="invocie_animal_page" model="ir.ui.view">
+        <record id="invoice_animal_page" model="ir.ui.view">
             <field name="name">res.partner.animal</field>
             <field name="model">res.partner</field>
             <field name="inherit_id" ref="base.view_partner_form"/>
