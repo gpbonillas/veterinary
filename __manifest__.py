@@ -24,7 +24,7 @@
         'security/ir.model.access.csv',
         'views/animal.xml',
         'wizard/mail_compose_message_view.xml',
-        'wizard/canelreason.xml',
+        'wizard/cancel_reason.xml',
         'views/appointment.xml',
         'views/evaluation.xml',
         'views/evaluation_stages.xml',        
