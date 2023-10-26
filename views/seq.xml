@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-  <data>
+  <data noupdate="1">
     <record id="cashadvance_seq" model="ir.sequence">
       <field name="name">Appointment</field>
       <field name="padding">4</field>
