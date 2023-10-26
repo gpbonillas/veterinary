@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+<data>
     <record id="account_invoice_appointment" model="ir.ui.view">
         <field name="name">Appointment</field>
         <field name="model">account.move</field>
@@ -181,7 +182,20 @@
         </field>
     </record>
 
-    <act_window id="action_veterinary_cancel_appointment" name="Cancel Appointment" res_model="cancel.appoint.wizard" src_model="veterinary.appointment" view_mode="form" multi="True" target="new" key2="client_action_multi" />
+    <act_window 
+        id="action_veterinary_cancel_appointment" 
+        name="Cancel Appointment" 
+        res_model="cancel.appoint.wizard" 
+        binding_model="veterinary.appointment" 
+        view_mode="form" />
 
-    <act_window id="action_veterinary_appointment_confirm" multi="True" key2="client_action_multi" name="Confirm Draft Appointment" res_model="veterinary.appointment.confirm" src_model="veterinary.appointment" view_mode="form" target="new" binding_view_types="form" />
+    <act_window 
+        id="action_veterinary_appointment_confirm" 
+        name="Confirm Draft Appointment" 
+        res_model="veterinary.appointment.confirm" 
+        binding_model="veterinary.appointment" 
+        view_mode="form" 
+        binding_view_types="form" />
+
+</data>    
 </odoo>
