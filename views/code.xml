@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <data>
+    
         <record model="ir.actions.act_window" id="code_list_action">
             <field name="name">Code</field>
             <field name="res_model">veterinary.code</field>
@@ -71,5 +71,4 @@
                 </form>
             </field>
         </record>
-    </data>
 </odoo>
