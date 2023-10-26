@@ -7,7 +7,7 @@ from odoo.exceptions import ValidationError, UserError
 
 
 class AccountInvoice(models.Model):
-    _inherit = 'account.invoice'
+    _inherit = 'account.move'
 
     def app_id_auto(self):
         try:
@@ -32,7 +32,7 @@ class Appointment(models.Model):
     user_id = fields.Many2one('res.users', string='Doctor', required=True, track_visibility='onchange',
                               default=lambda self: self.env.user)
     cancel_reason = fields.Text('Reason of cancellation')
-    invoice_ids = fields.One2many('account.invoice', 'appointment_id', string="Appointment Id")
+    invoice_ids = fields.One2many('account.move', 'appointment_id', string="Appointment Id")
     total_invoiced = fields.Char('Total', compute='_total_count')
     state = fields.Selection(
         [('draft', 'Draft'),
@@ -50,7 +50,7 @@ class Appointment(models.Model):
         return res
 
     def _total_count(self):
-        t = self.env['account.invoice'].search([['appointment_id', '=', self.id]])
+        t = self.env['account.move'].search([['appointment_id', '=', self.id]])
         self.total_invoiced = len(t)
 
     def action_cancel_appointment(self):
@@ -148,7 +148,7 @@ class Appointment(models.Model):
         return self.invoice_view()
 
     def action_create_invoice(self, grouped=False, final=False):
-        inv_obj = self.env['account.invoice']
+        inv_obj = self.env['account.move']
         precision = self.env['decimal.precision'].precision_get('Product Unit of Measure')
         invoice = self._prepare_invoice(self, self.env.cr, self.env.uid)
         references = {}

@@ -3,7 +3,7 @@
     <data>   
         <record id="account_invoice_appointment" model="ir.ui.view">
             <field name="name">Appointment</field>
-            <field name="model">account.invoice</field>
+            <field name="model">account.move</field>
             <field name="inherit_id" ref="account.invoice_form"/>
             <field name="arch" type="xml">
                 <xpath expr="//page[@name='other_info']/group/group" position="inside">
