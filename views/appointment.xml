@@ -161,7 +161,7 @@
                         <filter name="group_by_partner_id" string="Owner" context="{'group_by': 'partner_id'}"/>
                         <filter name="group_by_user_id" string="Doctor" context="{'group_by': 'user_id'}"/>
                         <filter name="group_by_state" string="State" context="{'group_by': 'state'}"/>
-                        <filter name="group_by_appointment_id" string="Appointment ID" context="{'group_by': 'appointment_id'}"/>
+                        <!--filter name="group_by_appointment_id" string="Appointment ID" context="{'group_by': 'appointment_id'}"/-->
                     </group>
                 </search>
             </field>
