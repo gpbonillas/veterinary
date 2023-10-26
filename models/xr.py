@@ -34,7 +34,6 @@ class Xr(models.Model):
         res = super(Xr, self).create(vals)
         return res  
 
-    @api.multi
     def action_xr_sent(self):
         '''
         This function opens a window to compose an email, with the edi sale template message loaded by default

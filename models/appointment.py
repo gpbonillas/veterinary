@@ -49,12 +49,10 @@ class Appointment(models.Model):
         res = super(Appointment, self).create(vals)
         return res
 
-    @api.multi
     def _total_count(self):
         t = self.env['account.invoice'].search([['appointment_id', '=', self.id]])
         self.total_invoiced = len(t)
 
-    @api.multi
     def action_cancel_appointment(self):
         return self.write({'state': 'cancel'})
 
@@ -138,7 +136,6 @@ class Appointment(models.Model):
         invoice['invoice_line'] = self._prepare_invoice_lines(cr, uid, invoice['fiscal_position'], context)
         return invoice
 
-    @api.one
     def action_confirm(self):
         self.state = 'confirm'
         for animal in self.animals:
@@ -150,7 +147,6 @@ class Appointment(models.Model):
             picking = self.env['veterinary.evaluation'].create(pick)
         return self.invoice_view()
 
-    @api.one
     def action_create_invoice(self, grouped=False, final=False):
         inv_obj = self.env['account.invoice']
         precision = self.env['decimal.precision'].precision_get('Product Unit of Measure')
@@ -196,6 +192,5 @@ class Appointment(models.Model):
                                        subtype_id=self.env.ref('mail.mt_note').id)
         return [invoice.id]
 
-    @api.one
     def action_done(self):
         self.state = 'done'

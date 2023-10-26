@@ -9,7 +9,6 @@ from odoo.tools import float_is_zero, float_compare, DEFAULT_SERVER_DATETIME_FOR
 from odoo.tools.misc import formatLang
 
 
-
 class Citology(models.Model):
     _name = 'veterinary.citology'
     _inherit = ['mail.thread']
@@ -35,7 +34,6 @@ class Citology(models.Model):
         res = super(Citology, self).create(vals)
         return res  
 
-    @api.multi
     def action_citology_sent(self):
         '''
         This function opens a window to compose an email, with the edi sale template message loaded by default

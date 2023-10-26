@@ -51,7 +51,6 @@ class Animal(models.Model):
     ('microchio_uniq', 'unique(microchip_number)', 'Microchip already exists!')
     ]
 
-    @api.multi
     def _total_appointment(self):
         self.total_appointment = len(self.appointment_id)
 

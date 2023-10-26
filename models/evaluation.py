@@ -13,7 +13,6 @@ class Evaluation(models.Model):
     _name = 'veterinary.evaluation'
     _inherit = ['mail.thread']
 
-    @api.multi
     def default_stage(self):
         return self.env['veterinary.evaluation.stages'].search([('name', '=', 'New')])
 
@@ -94,15 +93,12 @@ class Evaluation(models.Model):
         self.name = self.appointment_id.name
         return True
 
-    @api.one
     def action_create_invoice(self):
         self.appointment_id.action_create_invoice
 
-    @api.one
     def action_done(self):
         self.appointment_id.action_done
 
-    @api.multi
     def action_evaluation_sent(self):
         '''
         This function opens a window to compose an email, with the edi sale template message loaded by default
