@@ -12,7 +12,7 @@
             <field name="report_name">${(object.name or '').replace('/','_')}</field>
             <field name="lang">${object.partner_id.lang}</field>
 
-            <field name="body_html"><![CDATA[
+            <field name="body_html">
                 <p>Dear
                 Here is your ${doc_name} <strong>${object.name}</strong>
 
@@ -36,7 +36,7 @@
                     ${object.user_id.signature | safe}
                 % endif
                 </p>
-                ]]></field>
+            </field>
              
         </record>
 
@@ -50,7 +50,7 @@
             <field name="report_name">${(object.name or '').replace('/','_')}</field>
             <field name="lang">${object.partner_id.lang}</field>
 
-            <field name="body_html"><![CDATA[
+            <field name="body_html">
                     <p>Dear
                     Here is your ${doc_name} <strong>${object.name}</strong>
 
@@ -74,7 +74,6 @@
                         ${object.user_id.signature | safe}
                     % endif
                     </p>
-                    ]]>
             </field>             
         </record>
 
@@ -88,7 +87,7 @@
             <field name="report_name">${(object.name or '').replace('/','_')}</field>
             <field name="lang">${object.partner_id.lang}</field>
 
-            <field name="body_html"><![CDATA[
+            <field name="body_html">
                 <p>Dear
                 Here is your ${doc_name} <strong>${object.name}</strong>
 
@@ -112,7 +111,7 @@
                     ${object.user_id.signature | safe}
                 % endif
                 </p>
-                ]]></field>             
+                </field>             
         </record>
         <record id="email_template_test_sale" model="mail.template">
             <field name="name">Blood test - Send by Email</field>
@@ -124,7 +123,7 @@
             <field name="report_name">${(object.name or '').replace('/','_')}</field>
             <field name="lang">${object.partner_id.lang}</field>
 
-            <field name="body_html"><![CDATA[
+            <field name="body_html">
                 <p>Dear
                 Here is your ${doc_name} <strong>${object.name}</strong>
 
@@ -148,7 +147,7 @@
                     ${object.user_id.signature | safe}
                 % endif
                 </p>
-                ]]>
+                
             </field>
              
         </record>
