@@ -110,7 +110,7 @@
                     <group>
                         <group>
                             <field name="dateOfAppointment"/>
-                            <field name="partner_id" domain="[('customer', '=', True)]"/>
+                            <field name="partner_id" domain="[('active', '=', True)]"/>
                                 <field name="telephone"/>
                     
                         </group>

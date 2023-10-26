@@ -132,7 +132,6 @@
                                 <br/>
                                 <field name="partner_id"/>
                                 <br/>
-
                             </div>
                         </div>
                     </t>
@@ -156,7 +155,6 @@
                     </div>
                 </button>
             </div>
-
         </field>
     </record>
 
