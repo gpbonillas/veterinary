@@ -3,7 +3,7 @@
     <record model="ir.actions.act_window" id="echo_list_action">
         <field name="name">Pruebas ecográficas</field>
         <field name="res_model">veterinary.echo</field>
-        <field name="view_type">form</field>
+        <field name="binding_view_types">form</field>
         <field name="view_mode">tree,form</field>
     </record>
 
@@ -76,7 +76,7 @@
     <record id="action_echo_form" model="ir.actions.act_window">
         <field name="name">Ecografías</field>
         <field name="res_model">veterinary.echo</field>
-        <field name="view_type">form</field>
+        <field name="binding_view_types">form</field>
         <field name="view_mode">tree,form</field>
         <field name="search_view_id" ref="echo_search_view"/>
         <field name="view_id" ref="echo_tree_view"/>

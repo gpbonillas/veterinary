@@ -141,7 +141,6 @@
         </field>
     </record>
 
-
     <!-- Animal Onwer -->
     <record model="ir.ui.view" id="animal_view_buttons">
         <field name="name">partner.view.buttons</field>
