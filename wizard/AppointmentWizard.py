@@ -10,7 +10,6 @@ class AppointmentConfirm(models.TransientModel):
     _name = "veterinary.appointment.confirm"
     _description = "Confirm the selected Appointments"
 
-    @api.multi
     def appointment_confirm(self):
         context = dict(self._context or {})
         active_ids = context.get('active_ids', []) or []
@@ -25,7 +24,7 @@ class CancelAppointment(models.TransientModel):
     _name = "cancel.appoint.wizard"
     
     reason = fields.Text('Cancel Reason', required=True)
-    @api.multi
+    
     def action_cancel_appointment(self):
         context = dict(self._context or {})
         active_ids = context.get('active_ids', []) or []
