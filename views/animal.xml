@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <data>
+    
         <record model="ir.actions.act_window" id="animal_list_action1">
             <field name="name">Animals</field>
             <field name="type">ir.actions.act_window</field>
@@ -188,5 +188,5 @@
                 </xpath>
             </field>
         </record>
-    </data>
+    
 </odoo>
