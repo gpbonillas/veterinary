@@ -73,9 +73,13 @@
                 <button name="action_cancel_appointment" string="Cancel" states="draft,confirm" type="object" class="oe_highlight"/>
                 <button name="action_confirm" string="Confirm" states="draft" type="object" class="oe_highlight"/> 
                 <button name="action_done" states="confirm" string="Done" type="object" class="oe_highlight"/>    
-                <button name="action_create_invoice" context="{
-                                    'search_default_partner_id':[partner_id],
-                                    }" states="done" string="Invoice" type="object" class="yellowbutton"/>
+                <button 
+                    name="action_create_invoice" 
+                    context="{'search_default_partner_id':[partner_id],}" 
+                    states="done" 
+                    string="Invoice" 
+                    type="object" 
+                    class="yellowbutton"/>
                 <field name="name"/>
                 <field name="description"/>
                 <field name="dateOfAppointment"/>
@@ -126,14 +130,12 @@
                         <group>
                             <field name="dateOfAppointment"/>
                             <field name="partner_id" domain="[('active', '=', True)]"/>
-                                <field name="telephone"/>
-                    
+                            <field name="telephone"/>
                         </group>
                         <group>
                             <field name="description"/>
                             <field name="user_id"/>                     
                         </group>
-
                     </group>
                     <tree string="Animals">
                         <field  name="animals" 
@@ -175,9 +177,7 @@
         <field name="search_view_id" ref="appointment_search_view"/>
         <field name="view_id" ref="appointment_tree_view"/>
         <field name="help" type="html">
-            <p class="oe_view_nocontent_create">
-
-            </p>
+            <p class="oe_view_nocontent_create"></p>
         </field>
     </record>
     <!-- Appointment cancel Reason Action Button -->
