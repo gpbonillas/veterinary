@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <data>
+    
         <record id="account_invoice_appointment" model="ir.ui.view">
             <field name="name">Appointment</field>
             <field name="model">account.move</field>
@@ -218,5 +218,5 @@
             view_mode="form" 
             binding_view_types="form" /-->
 
-    </data>    
+     
 </odoo>
