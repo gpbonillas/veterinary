@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <data>
+    
         <record model="ir.actions.act_window" id="evaluation_list_action">
             <field name="name">Veterinary Evaluation</field>
             <field name="type">ir.actions.act_window</field>
@@ -235,5 +235,5 @@
                 </search>
             </field>
         </record>
-    </data>
+    
 </odoo>
