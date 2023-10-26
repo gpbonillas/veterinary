@@ -8,8 +8,6 @@ from odoo.exceptions import UserError
 from odoo.tools import float_is_zero, float_compare, DEFAULT_SERVER_DATETIME_FORMAT
 from odoo.tools.misc import formatLang
 
-
-
 class Echo(models.Model):
     _name = 'veterinary.echo'
     _inherit = ['mail.thread']  
@@ -22,15 +20,19 @@ class Echo(models.Model):
     user_id = fields.Many2one('res.users', string='Doctor')
     # Musculoskeletal System Page
     region = fields.Char('Region')
-    findings_echo = fields.Char('Findings')    
+    findings_echo = fields.Char('Findings')
     other_echo = fields.Text('Other')
     overall_assessment_echo = fields.Text('Overall Assessment')
-    
+
     @api.model
     def create(self, vals):
         vals['name'] = self.env['ir.sequence'].next_by_code('increment_echography') or _('New')
         res = super(Echo, self).create(vals)
         return res
+
+    def action_echo_sent(self):
+        print('Action echo sent')
+
     
 #     @api.multi
 #     def action_evaluation_sent(self):
