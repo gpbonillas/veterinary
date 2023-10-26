@@ -48,7 +48,7 @@
             <field name="name">code.drugtree</field>
             <field name="model">veterinary.code</field>
             <field name="arch" type="xml">
-                <tree string="Drugs" decoration-muted="category=='Drug'" >
+                <tree string="Drugs" >
                     <field name="name"/>
                     <field name="code"/>
                     <field name="category"/>
