@@ -33,8 +33,7 @@
         </record>
 
         <record model="ir.ui.view" id="procedure_tree_view">
-            <field name="name">code.procedure.tree</field>
-            <field name="string">'Procedures'</field>
+            <field name="name">code.procedure.tree</field>            
             <field name="model">veterinary.code</field>
             <field name="arch" type="xml">
                 <tree string="Procedures">
