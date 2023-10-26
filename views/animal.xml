@@ -4,8 +4,9 @@
 
         <record model="ir.actions.act_window" id="animal_list_action1">
             <field name="name">Animals</field>
+            <field name="type">ir.actions.act_window</field>
             <field name="res_model">veterinary.animal</field>
-            <field name="view_type">form</field>
+            <field name="binding_view_types">form</field>
             <field name="domain">[('partner_id','=','default_partner_id')]</field>
             <field name="context">{'default_partner_id':'partner_id'}</field>
             <field name="view_mode">tree,form,kanban</field>
@@ -13,7 +14,7 @@
         <record model="ir.actions.act_window" id="animal_list_action">
             <field name="name">Animals</field>
             <field name="res_model">veterinary.animal</field>
-            <field name="view_type">form</field>
+            <field name="binding_view_types">form</field>
             <field name="view_mode">tree,form,kanban</field>
         </record>
 
@@ -166,7 +167,7 @@
         <record id="action_animal_form" model="ir.actions.act_window">
             <field name="name">Animals</field>
             <field name="res_model">veterinary.animal</field>
-            <field name="view_type">form</field>
+            <field name="binding_view_types">form</field>
             <field name="view_mode">tree,form</field>
             <field name="search_view_id" ref="animal_search_view"/>
             <field name="view_id" ref="animal_tree_view"/>
