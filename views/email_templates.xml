@@ -13,30 +13,30 @@
             <field name="lang">${object.partner_id.lang}</field>
 
             <field name="body_html"><![CDATA[
-<p>Dear
-Here is your ${doc_name} <strong>${object.name}</strong>
+                <p>Dear
+                Here is your ${doc_name} <strong>${object.name}</strong>
 
-</p>
+                </p>
 
-    <br/><br/>
-% if is_online:
-    <center>
-        <a href="${access_url}" style="background-color: #1abc9c; padding: 20px; text-decoration: none; color: #fff; border-radius: 5px; font-size: 16px;" class="o_default_snippet_text">${access_name}</a>
-        <br/><br/>
-        <span style="color:#888888">(or view attached PDF)</span>
-    </center>
-    <br/>
-% endif
+                    <br/><br/>
+                % if is_online:
+                    <center>
+                        <a href="${access_url}" style="background-color: #1abc9c; padding: 20px; text-decoration: none; color: #fff; border-radius: 5px; font-size: 16px;" class="o_default_snippet_text">${access_name}</a>
+                        <br/><br/>
+                        <span style="color:#888888">(or view attached PDF)</span>
+                    </center>
+                    <br/>
+                % endif
 
-<p>You can reply to this email if you have any questions.</p>
-<p>Thank you,</p>
+                <p>You can reply to this email if you have any questions.</p>
+                <p>Thank you,</p>
 
-<p style="color:#eeeeee;">
-% if object.user_id and object.user_id.signature:
-    ${object.user_id.signature | safe}
-% endif
-</p>
-]]></field>
+                <p style="color:#eeeeee;">
+                % if object.user_id and object.user_id.signature:
+                    ${object.user_id.signature | safe}
+                % endif
+                </p>
+                ]]></field>
              
         </record>
 
@@ -51,33 +51,34 @@ Here is your ${doc_name} <strong>${object.name}</strong>
             <field name="lang">${object.partner_id.lang}</field>
 
             <field name="body_html"><![CDATA[
-<p>Dear
-Here is your ${doc_name} <strong>${object.name}</strong>
+                    <p>Dear
+                    Here is your ${doc_name} <strong>${object.name}</strong>
 
-</p>
+                    </p>
 
-    <br/><br/>
-% if is_online:
-    <center>
-        <a href="${access_url}" style="background-color: #1abc9c; padding: 20px; text-decoration: none; color: #fff; border-radius: 5px; font-size: 16px;" class="o_default_snippet_text">${access_name}</a>
-        <br/><br/>
-        <span style="color:#888888">(or view attached PDF)</span>
-    </center>
-    <br/>
-% endif
+                        <br/><br/>
+                    % if is_online:
+                        <center>
+                            <a href="${access_url}" style="background-color: #1abc9c; padding: 20px; text-decoration: none; color: #fff; border-radius: 5px; font-size: 16px;" class="o_default_snippet_text">${access_name}</a>
+                            <br/><br/>
+                            <span style="color:#888888">(or view attached PDF)</span>
+                        </center>
+                        <br/>
+                    % endif
 
-<p>You can reply to this email if you have any questions.</p>
-<p>Thank you,</p>
+                    <p>You can reply to this email if you have any questions.</p>
+                    <p>Thank you,</p>
 
-<p style="color:#eeeeee;">
-% if object.user_id and object.user_id.signature:
-    ${object.user_id.signature | safe}
-% endif
-</p>
-]]></field>
-             
+                    <p style="color:#eeeeee;">
+                    % if object.user_id and object.user_id.signature:
+                        ${object.user_id.signature | safe}
+                    % endif
+                    </p>
+                    ]]>
+            </field>             
         </record>
-                <record id="email_template_radiology" model="mail.template">
+
+        <record id="email_template_radiology" model="mail.template">
             <field name="name">Radiology - Send by Email</field>
             <field name="email_from">${(object.user_id.email and '%s &lt;%s&gt;' % (object.user_id.name, object.user_id.email) or '')|safe}</field>
             <field name="partner_to">${object.partner_id.id}</field>
@@ -88,31 +89,30 @@ Here is your ${doc_name} <strong>${object.name}</strong>
             <field name="lang">${object.partner_id.lang}</field>
 
             <field name="body_html"><![CDATA[
-<p>Dear
-Here is your ${doc_name} <strong>${object.name}</strong>
+                <p>Dear
+                Here is your ${doc_name} <strong>${object.name}</strong>
 
-</p>
+                </p>
 
-    <br/><br/>
-% if is_online:
-    <center>
-        <a href="${access_url}" style="background-color: #1abc9c; padding: 20px; text-decoration: none; color: #fff; border-radius: 5px; font-size: 16px;" class="o_default_snippet_text">${access_name}</a>
-        <br/><br/>
-        <span style="color:#888888">(or view attached PDF)</span>
-    </center>
-    <br/>
-% endif
+                    <br/><br/>
+                % if is_online:
+                    <center>
+                        <a href="${access_url}" style="background-color: #1abc9c; padding: 20px; text-decoration: none; color: #fff; border-radius: 5px; font-size: 16px;" class="o_default_snippet_text">${access_name}</a>
+                        <br/><br/>
+                        <span style="color:#888888">(or view attached PDF)</span>
+                    </center>
+                    <br/>
+                % endif
 
-<p>You can reply to this email if you have any questions.</p>
-<p>Thank you,</p>
+                <p>You can reply to this email if you have any questions.</p>
+                <p>Thank you,</p>
 
-<p style="color:#eeeeee;">
-% if object.user_id and object.user_id.signature:
-    ${object.user_id.signature | safe}
-% endif
-</p>
-]]></field>
-             
+                <p style="color:#eeeeee;">
+                % if object.user_id and object.user_id.signature:
+                    ${object.user_id.signature | safe}
+                % endif
+                </p>
+                ]]></field>             
         </record>
         <record id="email_template_test_sale" model="mail.template">
             <field name="name">Blood test - Send by Email</field>
@@ -125,32 +125,32 @@ Here is your ${doc_name} <strong>${object.name}</strong>
             <field name="lang">${object.partner_id.lang}</field>
 
             <field name="body_html"><![CDATA[
-<p>Dear
-Here is your ${doc_name} <strong>${object.name}</strong>
+                <p>Dear
+                Here is your ${doc_name} <strong>${object.name}</strong>
 
-</p>
+                </p>
 
-    <br/><br/>
-% if is_online:
-    <center>
-        <a href="${access_url}" style="background-color: #1abc9c; padding: 20px; text-decoration: none; color: #fff; border-radius: 5px; font-size: 16px;" class="o_default_snippet_text">${access_name}</a>
-        <br/><br/>
-        <span style="color:#888888">(or view attached PDF)</span>
-    </center>
-    <br/>
-% endif
+                    <br/><br/>
+                % if is_online:
+                    <center>
+                        <a href="${access_url}" style="background-color: #1abc9c; padding: 20px; text-decoration: none; color: #fff; border-radius: 5px; font-size: 16px;" class="o_default_snippet_text">${access_name}</a>
+                        <br/><br/>
+                        <span style="color:#888888">(or view attached PDF)</span>
+                    </center>
+                    <br/>
+                % endif
 
-<p>You can reply to this email if you have any questions.</p>
-<p>Thank you,</p>
+                <p>You can reply to this email if you have any questions.</p>
+                <p>Thank you,</p>
 
-<p style="color:#eeeeee;">
-% if object.user_id and object.user_id.signature:
-    ${object.user_id.signature | safe}
-% endif
-</p>
-]]></field>
+                <p style="color:#eeeeee;">
+                % if object.user_id and object.user_id.signature:
+                    ${object.user_id.signature | safe}
+                % endif
+                </p>
+                ]]>
+            </field>
              
         </record>
-
     </data>
 </odoo>

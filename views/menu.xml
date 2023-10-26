@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+  <data>
     <!-- Top menu item -->
     <!-- menu categories -->
     <menuitem id="main_animal_menu" name="Veterinary Clinic" groups="veterinary.group_veterinary_user"/>
@@ -18,4 +19,5 @@
     <menuitem id="veterinary_configuration" name="Configuration" parent="main_animal_menu" sequence="13"/>
     <menuitem id="evaluation_stage" name="Evaluation Stage" parent="veterinary_configuration" action="evaluation_stage_list_action" sequence="14"/>
     <menuitem id="code" name="Code dictionary" parent="veterinary_configuration" action="code_list_action" sequence="15"/>
+  </data>
 </odoo>
