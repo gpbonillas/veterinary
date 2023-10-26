@@ -204,7 +204,7 @@
             </field>
         </record>
 
-        <act_window 
+        <!--act_window 
             id="action_veterinary_cancel_appointment" 
             name="Cancel Appointment" 
             res_model="cancel.appoint.wizard" 
@@ -217,7 +217,7 @@
             res_model="veterinary.appointment.confirm" 
             binding_model="veterinary.appointment" 
             view_mode="form" 
-            binding_view_types="form" />
+            binding_view_types="form" /-->
 
     </data>    
 </odoo>
