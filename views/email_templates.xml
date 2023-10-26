@@ -44,7 +44,7 @@
         <record id="email_template_citology" model="mail.template">
             <field name="name">Citology - Send by Email</field>
             <field name="subject">Veterinary Clinic - Citology</field>
-            <field name="email_from">{{object.user_id.email}}<//field>
+            <field name="email_from">{{object.user_id.email}}</field>
             <field name="email_to">{{object.partner_id.email_formatted}}</field>
             <field name="partner_to">{{object.partner_id.id}}</ffield>
             <field name="model_id" ref="veterinary.model_veterinary_citology"/>
