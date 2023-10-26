@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <data>
+    
         <record model="ir.actions.act_window" id="bloodtest_list_action">
             <field name="name">Blood tests</field>
             <field name="res_model">veterinary.bloodtest</field>
@@ -86,5 +86,4 @@
                 <p class="oe_view_nocontent_create">Hacer Analítica</p>
             </field>
         </record>
-    </data>
 </odoo>
