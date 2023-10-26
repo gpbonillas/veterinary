@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <data>
+    
         <record model="ir.actions.act_window" id="citology_list_action">
             <field name="name">Citology</field>
             <field name="res_model">veterinary.citology</field>
@@ -89,5 +89,4 @@
                 <p class="oe_view_nocontent_create">Hacer Citología</p>
             </field>
         </record>
-    </data>
 </odoo>
