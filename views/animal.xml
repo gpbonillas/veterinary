@@ -149,7 +149,14 @@
             <field name="priority" eval="20"/>
             <field name="arch" type="xml">
                 <div name="button_box" position="inside">
-                    <button type="object" class="oe_stat_button" id="animal_button" icon="fa-paw" name="open_animal" groups="veterinary.group_veterinary_manager" context="{'default_partner_id': active_id}">
+                    <button 
+                        type="object" 
+                        class="oe_stat_button" 
+                        id="animal_button" 
+                        name="open_animal" 
+                        groups="veterinary.group_veterinary_manager" 
+                        context="{'default_partner_id': active_id}">
+                        
                         <div class="o_form_field o_stat_info">
                             <span class="o_stat_text">Animals</span>
                         </div>

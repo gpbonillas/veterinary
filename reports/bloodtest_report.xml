@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-        
         <template id="report_bloodtest_document">
             <t t-call="web.external_layout">
             <!-- <t t-set="o" t-value="o.with_context({'lang':o.partner_id.lang})" /> -->
@@ -47,6 +46,7 @@
                 </t>
             </t>
         </template>
+        
         <report 
             id="action_report_r"
             string="Veterinary Blood Test"

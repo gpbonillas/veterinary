@@ -44,7 +44,6 @@
                                         <field name="region" />
                                         <field name="findings_echo" />
                                     </group>
-                                    
                                 </group>
                             </page>                            
                         </notebook>
@@ -83,6 +82,7 @@
             <field name="view_id" ref="echo_tree_view"/>
             <field name="help" type="html">
                 <p class="oe_view_nocontent_create">
+                    Hacer Ecografías
                 </p>
             </field>
         </record>

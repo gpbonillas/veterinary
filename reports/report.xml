@@ -52,14 +52,14 @@
                         </thead>
                         <tbody class="invoice_tbody">
                             <tr>
-                                    <t t-if="doc.conformation">   
-                                    <td>Conformation:</td>
-                                    <td><span t-field="doc.conformation"/></td>   
-                                    </t>      
-                                    <t t-if="doc.feet_shoeing">              
-                                    <td>Feet and Shoeing:</td>
-                                    <td><span t-field="doc.feet_shoeing"/></td>
-                                    </t>
+                                <t t-if="doc.conformation">   
+                                <td>Conformation:</td>
+                                <td><span t-field="doc.conformation"/></td>   
+                                </t>      
+                                <t t-if="doc.feet_shoeing">              
+                                <td>Feet and Shoeing:</td>
+                                <td><span t-field="doc.feet_shoeing"/></td>
+                                </t>
                             </tr>
                             <tr>
                                 <t t-if="doc.le"> 
@@ -112,7 +112,6 @@
                                 <td><span t-field="doc.trot"/></td>
                                 </t>
                             </tr>
-
                         </tbody>
                     </table>
                     <table class="table table-condensed mt0">
@@ -261,7 +260,7 @@
                         <tbody class="invoice_tbody">
                             <tr>
                                 <t t-if="doc.scars"> 
-                                <td>Scars – Traumatic / Surgical:</td>
+                                <td>Scars–Traumatic / Surgical:</td>
                                 <td><span t-field="doc.scars"/></td>
                                 </t>
                                 <t t-if="doc.melanomas"> 
@@ -329,11 +328,9 @@
                             </tr>
                         </tbody>
                     </table>
-
                 </div>
             </t>
         </template>
-
 
         <template id="report_evaluation">
             <t t-call="web.html_container">
@@ -350,6 +347,5 @@
             file="veterinary.report_evaluation" 
             name="veterinary.report_evaluation"
         />
-
     </data>
 </odoo>
