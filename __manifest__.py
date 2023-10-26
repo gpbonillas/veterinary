@@ -18,7 +18,6 @@
 
     # always loaded
     'data': [
-    
         'views/css_loader.xml', 
         'views/seq.xml',
         'security/security.xml',
