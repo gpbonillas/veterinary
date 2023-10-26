@@ -61,7 +61,7 @@
                         </div>
                         <group>
                             <group>
-                                <field name="partner_id" domain="[('customer', '=', True)]"/>
+                                <field name="partner_id" domain="[('active', '=', True)]"/>
                                 <field name="sex"/>
                                 <field name="species"/>
                                 <field name="bread"/>
