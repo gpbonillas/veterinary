@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+    <data noupdate="1">
         <!--Email template -->
         <record id="email_template_edi_sale" model="mail.template">
             <field name="name">Evaluation - Send by Email</field>
-            <field name="email_from">${(object.user_id.email and '%s &lt;%s&gt;' % (object.user_id.name, object.user_id.email) or '')|safe}</field>
-            <field name="partner_to">${object.partner_id.id}</field>
+            <field name="subject">Veterinary Clinic - Evaluation</field>
+            <field name="email_from">{{object.user_id.email}}</field>
+            <field name="partner_to">{{object.partner_id.id}}</field>
+            <field name="email_to">{{object.partner_id.email_formatted}}</field>
             <field name="model_id" ref="veterinary.model_veterinary_evaluation"/>
-            <field name="auto_delete" eval="True"/>
+            <!--field name="auto_delete" eval="True"/>
             <field name="report_template" ref="action_report_s"/>
             <field name="report_name">${(object.name or '').replace('/','_')}</field>
-            <field name="lang">${object.partner_id.lang}</field>
+            <field name="lang">${object.partner_id.lang}</field-->
 
-            <field name="body_html">
+            <field name="body_html" type="html">
                 <p>Dear
                 Here is your ${doc_name} <strong>${object.name}</strong>
 
@@ -40,15 +43,17 @@
 
         <record id="email_template_citology" model="mail.template">
             <field name="name">Citology - Send by Email</field>
-            <field name="email_from">${(object.user_id.email and '%s &lt;%s&gt;' % (object.user_id.name, object.user_id.email) or '')|safe}</field>
-            <field name="partner_to">${object.partner_id.id}</field>
+            <field name="subject">Veterinary Clinic - Citology</field>
+            <field name="email_from">{{object.user_id.email}}<//field>
+            <field name="email_to">{{object.partner_id.email_formatted}}</field>
+            <field name="partner_to">{{object.partner_id.id}}</ffield>
             <field name="model_id" ref="veterinary.model_veterinary_citology"/>
-            <field name="auto_delete" eval="True"/>
+            <!--field name="auto_delete" eval="True"/>
             <field name="report_template" ref="action_report_c"/>
             <field name="report_name">${(object.name or '').replace('/','_')}</field>
-            <field name="lang">${object.partner_id.lang}</field>
+            <field name="lang">${object.partner_id.lang}</field-->
 
-            <field name="body_html">
+            <field name="body_html" type="html">
                     <p>Dear
                     Here is your ${doc_name} <strong>${object.name}</strong>
 
@@ -77,15 +82,17 @@
 
         <record id="email_template_radiology" model="mail.template">
             <field name="name">Radiology - Send by Email</field>
-            <field name="email_from">${(object.user_id.email and '%s &lt;%s&gt;' % (object.user_id.name, object.user_id.email) or '')|safe}</field>
-            <field name="partner_to">${object.partner_id.id}</field>
+            <field name="subject">Veterinary Clinic - Radiology</field>
+            <field name="email_from">{{object.user_id.email}}</field>
+            <field name="email_to">{{object.partner_id.email_formatted}}</field>
+            <field name="partner_to">{{object.partner_id.id}}</field>
             <field name="model_id" ref="veterinary.model_veterinary_xr"/>
-            <field name="auto_delete" eval="True"/>
+            <!--field name="auto_delete" eval="True"/>
             <field name="report_template" ref="action_report_x"/>
             <field name="report_name">${(object.name or '').replace('/','_')}</field>
-            <field name="lang">${object.partner_id.lang}</field>
+            <field name="lang">${object.partner_id.lang}</field-->
 
-            <field name="body_html">
+            <field name="body_html" type="html">
                 <p>Dear
                 Here is your ${doc_name} <strong>${object.name}</strong>
 
@@ -114,15 +121,17 @@
 
         <record id="email_template_test_sale" model="mail.template">
             <field name="name">Blood test - Send by Email</field>
-            <field name="email_from">${(object.user_id.email and '%s &lt;%s&gt;' % (object.user_id.name, object.user_id.email) or '')|safe}</field>
-            <field name="partner_to">${object.partner_id.id}</field>
+            <field name="subject">Veterinary Clinic - Blood test</field>
+            <field name="email_from">{{object.user_id.email}}</field>
+            <field name="email_to">{{object.partner_id.email_formatted}}</field>
+            <field name="partner_to">{{object.partner_id.id}}</field>
             <field name="model_id" ref="veterinary.model_veterinary_bloodtest"/>
-            <field name="auto_delete" eval="True"/>
+            <!--field name="auto_delete" eval="True"/>
             <field name="report_template" ref="action_report_r"/>
             <field name="report_name">${(object.name or '').replace('/','_')}</field>
-            <field name="lang">${object.partner_id.lang}</field>
+            <field name="lang">${object.partner_id.lang}</field-->
 
-            <field name="body_html">
+            <field name="body_html" type="html">
                 <p>Dear
                 Here is your ${doc_name} <strong>${object.name}</strong>
                 </p>
@@ -147,4 +156,5 @@
                 </p>                
             </field>            
         </record>
+    </data>
 </odoo>
