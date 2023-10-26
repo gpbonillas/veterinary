@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <data>
         <record model="ir.actions.act_window" id="echo_list_action">
             <field name="name">Pruebas ecográficas</field>
             <field name="res_model">veterinary.echo</field>
@@ -86,5 +85,4 @@
                 </p>
             </field>
         </record>
-    </data>
 </odoo>
