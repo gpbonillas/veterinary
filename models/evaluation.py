@@ -133,3 +133,4 @@ class Evaluation(models.Model):
 class EvaluationStages(models.Model):
     _name = 'veterinary.evaluation.stages'
     name = fields.Char('Stage')
+    sequence = fields.Integer('Sequence', default=0)
