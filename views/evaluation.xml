@@ -36,7 +36,7 @@
                             <group>
                                 <field name="animal" default="none"/>
                                 <field name="stage_id"/>
-                                <field name="partner_id" domain="[('customer', '=' ,True)]"/>
+                                <field name="partner_id" domain="[('active', '=' ,True)]"/>
                             </group>                            
                         </group>
                         <group>
