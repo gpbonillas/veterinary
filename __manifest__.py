@@ -14,7 +14,7 @@
     'version': '1.0',
 
     # any module necessary for this one to work correctly
-    'depends': ['account_invoicing'],
+    'depends': ['base', 'mail'],
 
     # always loaded
     'data': [
