@@ -15,7 +15,6 @@
         </record>
         <record model="veterinary.evaluation.stages" id="stage_evaluation4">
             <field name="name">Diagnostic Investigation</field>
-            <field name="fold" eval="False"/>
             <field name="sequence">70</field>
         </record>
         <record model="veterinary.evaluation.stages" id="stage_evaluation5">
